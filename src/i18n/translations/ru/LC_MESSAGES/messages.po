@@ -1,0 +1,3 @@
+#: handlers/common.py:22
+msgid "Hello, World!"
+msgstr "Привет, Мир!"
