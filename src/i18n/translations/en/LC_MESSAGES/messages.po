@@ -1,3 +1,24 @@
-#: handlers/common.py:22
-msgid "Hello, World!"
+#: src/utils/common.py:33
+msgid "🌙 Good night"
 msgstr ""
+
+#: src/utils/common.py:35
+msgid "☕️ Good morning"
+msgstr ""
+
+#: src/utils/common.py:37
+msgid "☀️ Good afternoon"
+msgstr ""
+
+#: src/utils/common.py:39
+msgid "🌆 Good evening"
+msgstr ""
+
+#: src/utils/common.py:41
+msgid "👋 Hello"
+msgstr ""
+
+#: src/utils/common.py:62
+msgid "User"
+msgstr ""
+
