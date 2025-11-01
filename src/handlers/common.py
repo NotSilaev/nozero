@@ -5,6 +5,8 @@ from exceptions import exceptions_catcher
 from i18n import language_detector
 from utils.common import respondEvent, getUserName, makeGreetingMessage
 
+from database.tables.users import createUser, getUser
+
 from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery
 from aiogram.filters import CommandStart
@@ -19,8 +21,14 @@ router = Router(name=__name__)
 @language_detector
 @exceptions_catcher()
 async def start(event: Message | CallbackQuery, _ = str) -> None:
-    user: User = event.from_user
-    user_name: str = getUserName(user=user, _=_)
+    telegram_user: User = event.from_user
+    telegram_id: int = telegram_user.id
+    user_name: str = getUserName(user=telegram_user, _=_)
+
+    user: dict = getUser(telegram_id=telegram_id)
+    if not user:
+        # Creating a user in the database
+        createUser(telegram_id=telegram_id)
 
     greeting: str = makeGreetingMessage(_=_)
 
