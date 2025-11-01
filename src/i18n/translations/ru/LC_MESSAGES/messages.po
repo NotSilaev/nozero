@@ -2,6 +2,52 @@
 msgid "*❌ An unknown error has occurred*"
 msgstr "*❌ Произошла неизвестная ошибка*"
 
+#: src/handlers/common.py:45
+msgid "📕 Notes"
+msgstr "📕 Заметки"
+
+#: src/handlers/notes.py:27
+msgid "*📕 Notes*"
+msgstr "*📕 Заметки*"
+
+#: src/handlers/notes.py:31
+msgid "✍️ Add note"
+msgstr "✍️ Добавить заметку"
+
+#: src/handlers/notes.py:33
+msgid "⬅️ Back"
+msgstr "⬅️ Назад"
+
+#: src/handlers/forms/add_note_form.py:37
+msgid ""
+"*✍️ Adding a note*\n"
+"\n"
+"📝 Enter the text of the note"
+msgstr ""
+"*✍️ Добавление заметки*\n"
+"\n"
+"📝 Введите текст заметки"
+
+#: src/handlers/forms/add_note_form.py:43
+msgid "❌ Cancel"
+msgstr "❌ Отмена"
+
+#: src/handlers/forms/add_note_form.py:76
+msgid ""
+"*✅ Note added*\n"
+"\n"
+msgstr ""
+"*✅ Заметка добавлена*\n"
+"\n"
+
+#: src/handlers/forms/add_note_form.py:77
+msgid "📖 Text:"
+msgstr "📖 Текст:"
+
+#: src/handlers/forms/add_note_form.py:81
+msgid "📕 To Notes menu"
+msgstr "📕 В меню заметок"
+
 #: src/utils/common.py:33
 msgid "🌙 Good night"
 msgstr "🌙 Доброй ночи"
@@ -25,4 +71,6 @@ msgstr "👋 Здравствуйте"
 #: src/utils/common.py:62
 msgid "User"
 msgstr "Пользователь"
+
+
 

@@ -1,5 +1,46 @@
-#: src/exceptions.py:39
+#: src/exceptions.py:40
 msgid "*❌ An unknown error has occurred*"
+msgstr ""
+
+#: src/handlers/common.py:45
+msgid "📕 Notes"
+msgstr ""
+
+#: src/handlers/notes.py:27
+msgid "*📕 Notes*"
+msgstr ""
+
+#: src/handlers/notes.py:31
+msgid "✍️ Add note"
+msgstr ""
+
+#: src/handlers/notes.py:33
+msgid "⬅️ Back"
+msgstr ""
+
+#: src/handlers/forms/add_note_form.py:37
+msgid ""
+"*✍️ Adding a note*\n"
+"\n"
+"📝 Enter the text of the note"
+msgstr ""
+
+#: src/handlers/forms/add_note_form.py:43
+msgid "❌ Cancel"
+msgstr ""
+
+#: src/handlers/forms/add_note_form.py:76
+msgid ""
+"*✅ Note added*\n"
+"\n"
+msgstr ""
+
+#: src/handlers/forms/add_note_form.py:77
+msgid "📖 Text:"
+msgstr ""
+
+#: src/handlers/forms/add_note_form.py:81
+msgid "📕 To Notes menu"
 msgstr ""
 
 #: src/utils/common.py:33
