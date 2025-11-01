@@ -24,6 +24,12 @@ def exceptions_catcher():
             except (IndexError, AttributeError):
                 user_id = None
 
+            # The i18n function
+            try:
+                _ = kwargs["_"]
+            except KeyError:
+                _ = str
+
             try:
                 result = await func(*args, **kwargs)
             except Exception as e:
@@ -31,7 +37,7 @@ def exceptions_catcher():
                 addLog(level="error", text=log_text)
 
                 if user_id:                 
-                    message_text = "*❌ An unknown error has occurred*"
+                    message_text = _("*❌ An unknown error has occurred*")
                     telegram_api = TelegramAPI(settings.TELEGRAM_BOT_TOKEN)
                     telegram_api.sendRequest(
                         request_method="POST",

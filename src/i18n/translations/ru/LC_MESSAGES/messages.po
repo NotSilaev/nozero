@@ -1,3 +1,7 @@
+#: src/exceptions.py:39
+msgid "*❌ An unknown error has occurred*"
+msgstr "*❌ Произошла неизвестная ошибка*"
+
 #: src/utils/common.py:33
 msgid "🌙 Good night"
 msgstr "🌙 Доброй ночи"
