@@ -1,4 +1,4 @@
-#: src/exceptions.py:39
+#: src/exceptions.py:40
 msgid "*❌ An unknown error has occurred*"
 msgstr "*❌ Произошла неизвестная ошибка*"
 
@@ -6,17 +6,27 @@ msgstr "*❌ Произошла неизвестная ошибка*"
 msgid "📕 Notes"
 msgstr "📕 Заметки"
 
-#: src/handlers/notes.py:27
+#: src/handlers/notes.py:36
 msgid "*📕 Notes*"
 msgstr "*📕 Заметки*"
 
-#: src/handlers/notes.py:31
+#: src/handlers/notes.py:40
 msgid "✍️ Add note"
 msgstr "✍️ Добавить заметку"
 
-#: src/handlers/notes.py:33
+#: src/handlers/notes.py:41
+msgid "🗃 Notes list"
+msgstr "🗃 Список заметок"
+
+#: src/handlers/notes.py:43 src/handlers/notes.py:123
+#: src/utils/pagination.py:67
+#: src/modules/notes.py:40
 msgid "⬅️ Back"
 msgstr "⬅️ Назад"
+
+#: src/handlers/notes.py:118
+msgid "*🔎 Note not found*"
+msgstr "*🔎 Заметка не найдена*"
 
 #: src/handlers/forms/add_note_form.py:37
 msgid ""
@@ -40,13 +50,29 @@ msgstr ""
 "*✅ Заметка добавлена*\n"
 "\n"
 
-#: src/handlers/forms/add_note_form.py:77
+#: src/handlers/forms/add_note_form.py:77 src/modules/notes.py:89
 msgid "📖 Text:"
 msgstr "📖 Текст:"
 
 #: src/handlers/forms/add_note_form.py:81
 msgid "📕 To Notes menu"
 msgstr "📕 В меню заметок"
+
+#: src/modules/notes.py:26
+msgid "*🗃 Notes list*"
+msgstr "*🗃 Список заметок*"
+
+#: src/modules/notes.py:27
+msgid "📑 Notes count:"
+msgstr "📑 Количество заметок:"
+
+#: src/modules/notes.py:88
+msgid "🔖 Note"
+msgstr "🔖 Заметка"
+
+#: src/modules/notes.py:90
+msgid "📅 Created at:"
+msgstr "📅 Создана:"
 
 #: src/utils/common.py:33
 msgid "🌙 Good night"
@@ -66,11 +92,8 @@ msgstr "🌆 Добрый вечер"
 
 #: src/utils/common.py:41
 msgid "👋 Hello"
-msgstr "👋 Здравствуйте"
+msgstr "👋 Привет"
 
 #: src/utils/common.py:62
 msgid "User"
 msgstr "Пользователь"
-
-
-

@@ -3,6 +3,7 @@ sys.path.append("../../") # src/
 
 from database import execute, fetch
 from database.utils import makeQueryConditions
+
 from utils.common import getCurrentDateTime
 
 import uuid

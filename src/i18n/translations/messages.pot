@@ -6,16 +6,26 @@ msgstr ""
 msgid "📕 Notes"
 msgstr ""
 
-#: src/handlers/notes.py:27
+#: src/handlers/notes.py:36
 msgid "*📕 Notes*"
 msgstr ""
 
-#: src/handlers/notes.py:31
+#: src/handlers/notes.py:40
 msgid "✍️ Add note"
 msgstr ""
 
-#: src/handlers/notes.py:33
+#: src/handlers/notes.py:41
+msgid "🗃 Notes list"
+msgstr ""
+
+#: src/handlers/notes.py:43 src/handlers/notes.py:123
+#: src/utils/pagination.py:67
+#: src/modules/notes.py:40
 msgid "⬅️ Back"
+msgstr ""
+
+#: src/handlers/notes.py:118
+msgid "*🔎 Note not found*"
 msgstr ""
 
 #: src/handlers/forms/add_note_form.py:37
@@ -35,12 +45,28 @@ msgid ""
 "\n"
 msgstr ""
 
-#: src/handlers/forms/add_note_form.py:77
+#: src/handlers/forms/add_note_form.py:77 src/modules/notes.py:89
 msgid "📖 Text:"
 msgstr ""
 
 #: src/handlers/forms/add_note_form.py:81
 msgid "📕 To Notes menu"
+msgstr ""
+
+#: src/modules/notes.py:26
+msgid "*🗃 Notes list*"
+msgstr ""
+
+#: src/modules/notes.py:27
+msgid "📑 Notes count:"
+msgstr ""
+
+#: src/modules/notes.py:88
+msgid "🔖 Note"
+msgstr ""
+
+#: src/modules/notes.py:90
+msgid "📅 Created at:"
 msgstr ""
 
 #: src/utils/common.py:33
