@@ -62,3 +62,17 @@ def getUserName(user: User, _ = str) -> str:
         user_name = _("User") + f"№{user_id}"
 
     return user_name
+
+
+def getCallParams(call: CallbackQuery) -> dict:
+    try:
+        call_params_list: list = call.data.split("?")[1].split("&")
+    except IndexError:
+        return {}
+
+    call_params = {}
+    for param in call_params_list:
+        key, value = param.split("=")
+        call_params[key] = value
+
+    return call_params
