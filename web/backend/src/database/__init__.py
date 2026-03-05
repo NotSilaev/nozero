@@ -60,7 +60,7 @@ async def fetch(query: str, params: tuple = None, fetch_type: str = "one", as_di
         response = list()
 
     if as_dict and response:
-        columns = response[0].keys()
+        columns = response.keys() if fetch_type == "one" else response[0].keys()
         match fetch_type:
             case "one":
                 response = [dict(zip(columns, response))]
