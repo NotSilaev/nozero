@@ -1,15 +1,20 @@
-from src.middleware.exceptions import exceptions_handling_middleware
+from src.core.config import settings
+
+from src.managers.controllers import ControllerMananger
+from src.managers.middleware import MiddlewareManager
 
 from fastapi import FastAPI
 
-from starlette.middleware.base import BaseHTTPMiddleware
 
-
-app = FastAPI()
-
-
-# Middleware
-app.add_middleware(
-    BaseHTTPMiddleware, 
-    dispatch=exceptions_handling_middleware
+app = FastAPI(
+    title=settings.PROJECT_TITLE,
+    version=settings.PROJECT_VERSION
 )
+
+
+controller_manager = ControllerMananger()
+controller_manager.connect(app)
+
+
+middleware_manager = MiddlewareManager()
+middleware_manager.connect(app)

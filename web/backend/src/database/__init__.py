@@ -1,4 +1,4 @@
-from src.config import settings
+from src.core.config import settings
 
 import asyncpg
 from typing import Any

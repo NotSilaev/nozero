@@ -1,4 +1,4 @@
-from src.logs import Logs
+from src.core.logs import Logs
 
 from fastapi import Request, Response
 from fastapi.responses import JSONResponse
