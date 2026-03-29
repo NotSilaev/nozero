@@ -13,13 +13,6 @@ from starlette.middleware.base import BaseHTTPMiddleware
 class MiddlewareManager:
     middleware = [
         {
-            "middleware_class": CORSMiddleware,
-            "allow_origins": settings.CORS_ORIGINS,
-            "allow_credentials": True,
-            "allow_methods": ["*"],
-            "allow_headers": ["*"],
-        },
-        {
             "middleware_class": BaseHTTPMiddleware,
             "dispatch": auth_middleware,
         },
@@ -30,6 +23,13 @@ class MiddlewareManager:
         {
             "middleware_class": BaseHTTPMiddleware,
             "dispatch": exceptions_handling_middleware,
+        },
+        {
+            "middleware_class": CORSMiddleware,
+            "allow_origins": settings.CORS_ORIGINS,
+            "allow_credentials": True,
+            "allow_methods": ["*"],
+            "allow_headers": ["*"],
         },
     ]
 
