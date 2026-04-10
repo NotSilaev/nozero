@@ -31,7 +31,7 @@ router = UsersController.router
 @router.post("/login")
 @rate_limiter(max_requests=3, window_seconds=30)
 async def login(login_request: LoginRequest, request: Request) -> JSONResponse:
-    is_email_valid: bool = EmailsValidator(login_request.email).is_email_valid()
+    is_email_valid: bool = EmailsValidator(email=login_request.email).is_email_valid()
     if not is_email_valid:
         return JSONResponse(
             status_code=400,
@@ -43,13 +43,21 @@ async def login(login_request: LoginRequest, request: Request) -> JSONResponse:
         return JSONResponse(status_code=200, content={"message": "OK"})
     
     try:
-        user_data: dict = await UsersService.login(login_request.email, login_request.code)
+        user_data: dict = await UsersService.login(
+            email=login_request.email, 
+            code=login_request.code
+        )
     except LoginError as e:
         message = str(e) if e else "Login error"
         return JSONResponse(
             status_code=400,
             content={"errors": [{"code": "BAD_REQUEST", "message": message}]}
         )
+
+    await CodesService.delete_code(
+        email=login_request.email,
+        code=login_request.code
+    )
 
     response = JSONResponse(status_code=200, content=user_data)
     response: JSONResponse = TokensService.set_refresh_token_cookie(

@@ -39,3 +39,10 @@ class CodesTable:
             code = None
 
         return code
+    
+
+    @staticmethod
+    async def delete(email: str, code: str) -> None:
+        stmt = "DELETE FROM codes WHERE email = $1 AND code = $2"
+        params = (email, code)
+        await execute(stmt, params)

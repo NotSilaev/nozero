@@ -21,7 +21,7 @@ class CodesService:
 
 
     @staticmethod
-    async def is_code_valid(email, code) -> bool:
+    async def is_code_valid(email: str, code: str) -> bool:
         code_data: dict = await CodesTable.get(email=email, code=code)
 
         if not code_data:
@@ -33,3 +33,8 @@ class CodesService:
             return False
         
         return True
+    
+
+    @staticmethod
+    async def delete_code(email: str, code: str) -> None:
+        await CodesTable.delete(email=email, code=code)
