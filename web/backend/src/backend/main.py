@@ -1,20 +1,20 @@
-from backend.middleware.exceptions import exceptions_handling_middleware
+from backend.core.config import settings
+
+from backend.managers.controllers import ControllerMananger
+from backend.managers.middleware import MiddlewareManager
 
 from fastapi import FastAPI
 
-from starlette.middleware.base import BaseHTTPMiddleware
 
-
-app = FastAPI()
-
-
-@app.get("/")
-async def root():
-    return {"text": "Hello, NOZERO!"}
-
-
-# Middleware
-app.add_middleware(
-    BaseHTTPMiddleware, 
-    dispatch=exceptions_handling_middleware
+app = FastAPI(
+    title=settings.PROJECT_TITLE,
+    version=settings.PROJECT_VERSION
 )
+
+
+controller_manager = ControllerMananger()
+controller_manager.connect(app)
+
+
+middleware_manager = MiddlewareManager()
+middleware_manager.connect(app)

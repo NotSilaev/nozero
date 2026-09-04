@@ -1,0 +1,9 @@
+THROTTLE_LEVELS = (
+    # (Requests count, Delay seconds)
+    (20, 0.05),
+    (40, 0.1),
+    (80, 0.2),
+    (120, 0.35),
+    (200, 0.6),
+    (300, 1.0),
+)
